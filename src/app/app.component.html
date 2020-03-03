@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Sample To Do List
+  </h1>
+  <div>
+    <ul class="sampleList">
+      <li *ngFor="let item of lists">
+        {{item}}
+        <span class="delete" (click)="onDelete(item)">Delete</span>
+      </li>
+    </ul>
+  </div>
+  <form [formGroup]="toDoForm" (ngSubmit)="onSubmit()">
+    <label>
+      Enter:
+      <input type="text" formControlName="sampleInput" />
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+</div>
